@@ -1,4 +1,6 @@
+import 'package:densu/app/widgets/text.dart';
 import 'package:flutter/material.dart';
+
 
 class UniversalTextInput extends StatelessWidget {
   final TextEditingController controller;
@@ -8,7 +10,9 @@ class UniversalTextInput extends StatelessWidget {
   final IconData? prefixIcon;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
+  final double borderRadius;
   final Function(String)? onFieldSubmitted;
+  final Color? backgroundColor; // New property for background color
 
   const UniversalTextInput({
     Key? key,
@@ -20,6 +24,8 @@ class UniversalTextInput extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.textInputAction = TextInputAction.done,
     this.onFieldSubmitted,
+    this.borderRadius = 10.0,
+    this.backgroundColor, // Initialize the new property
   }) : super(key: key);
 
   @override
@@ -32,9 +38,19 @@ class UniversalTextInput extends StatelessWidget {
       onFieldSubmitted: onFieldSubmitted,
       validator: validator,
       decoration: InputDecoration(
-        labelText: label,
+        hintText: label,
+        hintStyle: TextStyleConstants.getStyle(
+          textStyle: TextStyles.medium,
+          color: Colors.black54,
+          fontWeight: FontWeight.w400,
+        ),
         prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
+        filled: true,
+        // Fill the background with color
+        fillColor: backgroundColor ?? Colors.transparent,
       ),
     );
   }

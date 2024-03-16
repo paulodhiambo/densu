@@ -1,6 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+enum TextStyles {
+  small,
+  medium,
+  large,
+  xlarge,
+}
+
+class TextStyleConstants {
+  static const double smallFontSize = 14.0;
+  static const double mediumFontSize = 16.0;
+  static const double largeFontSize = 20.0;
+  static const double xlargeFontSize = 28.0;
+
+  static TextStyle getStyle({
+    required TextStyles textStyle,
+    Color? color,
+    FontWeight? fontWeight,
+  }) {
+    double fontSize;
+    switch (textStyle) {
+      case TextStyles.small:
+        fontSize = smallFontSize;
+        break;
+      case TextStyles.medium:
+        fontSize = mediumFontSize;
+        break;
+      case TextStyles.large:
+        fontSize = largeFontSize;
+        break;
+      case TextStyles.xlarge:
+        fontSize = xlargeFontSize;
+        break;
+      default:
+        fontSize = mediumFontSize;
+    }
+
+    return TextStyle(
+      fontSize: fontSize,
+      fontWeight: fontWeight ?? FontWeight.normal,
+      color: color ?? Colors.black,
+    );
+  }
+}
+
 class UniversalText extends StatelessWidget {
   final String text;
   final TextStyle? style;

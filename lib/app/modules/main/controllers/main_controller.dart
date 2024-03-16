@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 
 class MainController extends GetxController {
-  //TODO: Implement MainController
+  var selectedTab = 0.obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +17,4 @@ class MainController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
