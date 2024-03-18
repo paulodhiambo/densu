@@ -1,9 +1,12 @@
+import 'package:densu/app/modules/home/data/leads_datasource.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class QuotesController extends GetxController {
-  //TODO: Implement QuotesController
+  final DataTableSource dataSource = LeadsDatasource();
 
   final count = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
