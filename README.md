@@ -2,11 +2,7 @@
 
 A new Flutter project.
 
-#### Getting Started
-
-Certainly! Below is the directory structure using the GetX pattern along with setup instructions in Markdown format:
-
-### Flutter Project Setup with GetX Pattern
+### Densu Project Setup with GetX Pattern
 
 #### Directory Structure
 
@@ -129,12 +125,12 @@ lib/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
+   git clone git@github.com:paulodhiambo/densu.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd project_name/
+   cd densu/
    ```
 
 3. Install dependencies:
@@ -155,7 +151,3 @@ lib/
 - **app/themes/**: Includes app-wide themes and color constants.
 - **app/utils/**: Utility functions and constants.
 - **app/widgets/**: Reusable UI widgets used throughout the app.
-
-This directory structure follows the GetX pattern for efficient state management and modular development in Flutter. Customize the modules, widgets, and other components as per your project requirements.
-
-Let me know if you need any further assistance or information!
