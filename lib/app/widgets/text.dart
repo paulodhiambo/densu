@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 enum TextStyles {
+  xsmall,
   small,
   medium,
   large,
@@ -9,6 +10,7 @@ enum TextStyles {
 }
 
 class TextStyleConstants {
+  static const double xsmallFontSize = 14.0;
   static const double smallFontSize = 14.0;
   static const double mediumFontSize = 16.0;
   static const double largeFontSize = 20.0;
@@ -21,6 +23,9 @@ class TextStyleConstants {
   }) {
     double fontSize;
     switch (textStyle) {
+      case TextStyles.xsmall:
+        fontSize = xsmallFontSize;
+        break;
       case TextStyles.small:
         fontSize = smallFontSize;
         break;

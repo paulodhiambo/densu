@@ -83,7 +83,7 @@ class QuotesView extends GetView<QuotesController> {
                   ),
                   DataColumn(
                     label: UniversalText(
-                      'Name',
+                      'Quotes',
                       style: TextStyleConstants.getStyle(
                         textStyle: TextStyles.small,
                         color: AppColors.textPrimary,

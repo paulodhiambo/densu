@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class AuthenticationController extends GetxController {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  var rememberMe = false.obs;
 
   @override
   void onInit() {

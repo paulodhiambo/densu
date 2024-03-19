@@ -104,17 +104,21 @@ class AuthenticationView extends GetView<AuthenticationController> {
               ),
               Row(
                 children: [
-                  UniversalCheckbox(
-                    isChecked: true,
-                    onChange: (value) {},
-                    backgroundColor: Colors.transparent,
-                    borderColor: AppColors.background,
-                    icon: Icons.check,
-                    size: 40,
-                    iconSize: 30,
+                  Obx(
+                    () => UniversalCheckbox(
+                      isChecked: controller.rememberMe.value,
+                      onChange: (value) {
+                        controller.rememberMe.value = value;
+                      },
+                      backgroundColor: Colors.transparent,
+                      borderColor: AppColors.background,
+                      icon: Icons.check,
+                      size: 20,
+                      iconSize: 15,
+                    ),
                   ),
                   const UniversalSpacer(
-                    width: SpacerConstants.xsmall,
+                    width: SpacerConstants.small,
                   ),
                   Text(
                     'Keep me logged in',
@@ -134,6 +138,7 @@ class AuthenticationView extends GetView<AuthenticationController> {
                 onPressed: () {
                   Get.toNamed(Routes.MAIN);
                 },
+                borderRadius: 30,
               )
             ],
           ),
