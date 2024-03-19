@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 
 class QuotesController extends GetxController {
   final DataTableSource dataSource = LeadsDatasource();
+  var isAddingNewQuote = false.obs;
+  var emailController = TextEditingController();
 
-  final count = 0.obs;
 
   @override
   void onInit() {
@@ -21,6 +22,4 @@ class QuotesController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

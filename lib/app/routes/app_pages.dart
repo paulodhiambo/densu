@@ -10,6 +10,8 @@ import '../modules/main/bindings/main_binding.dart';
 import '../modules/main/views/main_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
+import '../modules/quote_detail/bindings/quote_detail_binding.dart';
+import '../modules/quote_detail/views/quote_detail_view.dart';
 import '../modules/quotes/bindings/quotes_binding.dart';
 import '../modules/quotes/views/quotes_view.dart';
 
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.AUTHENTICATION,
       page: () => const AuthenticationView(),
       binding: AuthenticationBinding(),
+    ),
+    GetPage(
+      name: _Paths.QUOTE_DETAIL,
+      page: () => const QuoteDetailView(),
+      binding: QuoteDetailBinding(),
     ),
   ];
 }

@@ -9,6 +9,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const LEADS = _Paths.LEADS;
   static const AUTHENTICATION = _Paths.AUTHENTICATION;
+  static const QUOTE_DETAIL = _Paths.QUOTE_DETAIL;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const LEADS = '/leads';
   static const AUTHENTICATION = '/authentication';
+  static const QUOTE_DETAIL = '/quote-detail';
 }
