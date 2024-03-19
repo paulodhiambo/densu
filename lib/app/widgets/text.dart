@@ -3,17 +3,21 @@ import 'package:get/get.dart';
 
 enum TextStyles {
   xsmall,
+  xxsmall,
   small,
   medium,
   large,
+  slarge,
   xlarge,
 }
 
 class TextStyleConstants {
+  static const double xxsmallFontSize = 8.0;
   static const double xsmallFontSize = 14.0;
   static const double smallFontSize = 14.0;
   static const double mediumFontSize = 16.0;
   static const double largeFontSize = 20.0;
+  static const double slargeFontSize = 25.0;
   static const double xlargeFontSize = 28.0;
 
   static TextStyle getStyle({
@@ -23,6 +27,9 @@ class TextStyleConstants {
   }) {
     double fontSize;
     switch (textStyle) {
+      case TextStyles.xxsmall:
+        fontSize = xxsmallFontSize;
+        break;
       case TextStyles.xsmall:
         fontSize = xsmallFontSize;
         break;
@@ -34,6 +41,9 @@ class TextStyleConstants {
         break;
       case TextStyles.large:
         fontSize = largeFontSize;
+        break;
+      case TextStyles.slarge:
+        fontSize = slargeFontSize;
         break;
       case TextStyles.xlarge:
         fontSize = xlargeFontSize;

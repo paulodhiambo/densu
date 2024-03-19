@@ -30,6 +30,7 @@ class MainView extends GetView<MainController> {
         actions: const [
           CircleAvatar(
             radius: 16,
+            backgroundImage: AssetImage("assets/images/profile.png"),
           ),
           UniversalSpacer(
             width: SpacerConstants.small,
@@ -67,7 +68,8 @@ class MainView extends GetView<MainController> {
           showUnselectedLabels: false,
           showSelectedLabels: false,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.people_outline), label: "Leads"),
             BottomNavigationBarItem(
